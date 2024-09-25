@@ -1,0 +1,12 @@
+html, body {
+  background-color: rgb(55, 175, 7) !important; /* Green background */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}

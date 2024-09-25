@@ -1,0 +1,83 @@
+**********************************************************************************************************
+What is Redux?
+    It is same like useContext Hooks, it provide more control than useContext Hooks.
+    Redux is used for managing states across components.
+
+**********************************************************************************************************
+store:
+    -> We create one store where we keep all slices.
+    -> store is like a central database which can be accessable by all the components.  
+
+slice:
+    -> slice uses for managing particular states and perfroming operations.
+    -> if we have 10 state to be managed then we will have 10 slice as well.
+    -> It receives action, type, payload and perfrom respective operations.
+
+Provider:
+    -> once we create store, we need Provider, It is basically use for giveing store states access to all the
+       the components.
+
+**********************************************************************************************************
+Steps:
+    1) create store
+    2) add provider so that store should be accessable acroos all the components
+    3) create slice to manage state
+    4) uodate store with slice name and key
+    5) consume store by using useSelector and useDispatch()
+
+
+**********************************************************************************************************
+Slice: (refer to Counter.js)
+    A slice has three main fields:
+    1) name: 'counter',
+    -> name of slice 
+
+    2) initialState: { 
+        count : 0
+    }
+    -> initial value of state
+
+    3)reducers: {
+
+    }
+    -> Operation with states
+
+******************************************************************************************************
+
+Store consumer:
+    -> refer to counter.js
+
+const count = useSelector((state) => state.counter.count)
+    // Counter is key declared in the store
+    // count is variable in the states.
+    
+const dispatch = useDispatch()
+    dispatch(increment())
+    dispatch(decrement())
+
+    Here, increment is decrement imported from CounterSlice.
+
+    import { increment,decrement } from './slice/CounterSlice'
+
+
+**********************************************************************************************************
+
+User clicks "Increment" button
+        |
+        v
+ Dispatch increment action
+        |
+        v
+counterReducer handles action
+        |
+        v
+  Redux store updates state
+        |
+        v
+  Counter component re-renders with new state
+        |
+        v
+ Updated count displayed in UI
+
+
+**********************************************************************************************************

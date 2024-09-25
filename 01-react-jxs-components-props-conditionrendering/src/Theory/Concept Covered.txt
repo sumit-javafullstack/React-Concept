@@ -1,0 +1,21 @@
+1) Components
+
+2) Props( back and forth data transfer between Components)
+    -> Forward : App.js to Employee.js/Customer.js
+    -> Backward : Counter.js to App.js
+
+3) Condition Rendering of Component
+    -> Two Different way
+        1) Employee.js to USEmployee.js/OtherEmployee.js
+        2) Employee.js to HighestPaidEmployee.js
+
+4) Custom Common Components
+    If we want to apply some coomon design functioanlity across multiple Components.
+    
+5) useState
+    -> Counter.js
+
+
+
+
+

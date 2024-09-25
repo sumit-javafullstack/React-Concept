@@ -1,0 +1,6 @@
+It is like defining a constant class in java and all other classes will be fetching details 
+from that constant class. ( CreateContext )
+
+
+NOte: we prefer to use Redux for this activity
+
